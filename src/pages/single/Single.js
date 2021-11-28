@@ -1,6 +1,6 @@
 import './single.css'
 import Sidebar from "../../components/sidebar/Sidebar"
-import Singlepost from ''
+import Singlepost from '../../components/singlepost/Singlepost'
 
 export default function single() {
     return (

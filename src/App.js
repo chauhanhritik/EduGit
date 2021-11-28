@@ -1,6 +1,7 @@
 
-import Navbar from "./navbar/Navbar.js";
+import Navbar from "./components/navbar/Navbar.js";
 import Home from "./pages/Home.js";
+import Single from "./pages/single/Single.js";
 
 
 
@@ -12,8 +13,9 @@ function App() {
         blog app */}
       {/* </div> */}
 
-     <Home/> 
-       </>
+     {/* <Home/>  */}
+     <Single />
+     </>
   );
 }
 

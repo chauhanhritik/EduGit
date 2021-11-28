@@ -1,0 +1,59 @@
+.post {
+  width: 385px;
+  margin: 0px 25px 40px 25px;
+}
+
+.postimg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /*-------cover used originally--------*/
+  border-radius: 10px;
+}
+
+.postinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*Items wont be aligned without the upper two*/
+}
+
+.postcat {
+  font-family: "Varela Round", sans-serif;
+  font-style: 11px;
+  color: #be9656;
+  line-height: 15px;
+  margin-top: 20px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.posttitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.postdate {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #999;
+  margin-top: 12px;
+}
+
+.postdescription {
+  font-family: "Varela Round", sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 24px; /*Spacing in between the lines*/
+  margin-top: 12px;
+
+  /*LINES BELOW ARE USED TO SHOW ONLY THE FIRST  4 LINES OF THE DESCRITION INSTEAD OF THE WHOLE PARAGRAPH*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /*specifying how many lines will be shown*/
+  -webkit-box-orient: vertical;
+}

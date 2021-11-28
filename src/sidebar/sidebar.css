@@ -1,0 +1,68 @@
+.sidebar{
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /*PUTS CONTENT IN ONE COLUMN INSTEAD OF A ROW AFTER FLEX*/
+
+}
+
+.sidebaritem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.sidebartitle{
+    margin: 10px;
+    width:80%;
+    padding: 10px;
+    border-top: 1px solid #a4a4a4; /*Puts a line on the screen*/
+    border-bottom: 1px solid #a4a4a4;
+    font-family: 'Varela Round',sans-serif;
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+.sidebaritem > img{  /*INSIDE CLASSNAME SIDEBARITEM SELECT THE <IMG> TAG*/
+    margin-top: 15px;
+}
+
+.sidebaritem>p{   /*INSIDE CLASSNAME SIDEBARITEM SELECT THE <p> TAG*/
+    padding: 30px;
+}
+
+.sidebarlist{
+    list-style: none;
+    margin-bottom: 30px;
+}
+ 
+.sidebarlistitems{
+    display:inline-block;
+    width: 50%;  /*gives space in between the itmes else all three will be in one line only*/
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.sidebarsocial{
+    margin-top: 10px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sidebaricons{
+    width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;  /*changes the size of icons as well*/
+}

@@ -5,7 +5,7 @@ import Singlepost from '../../components/singlepost/Singlepost'
 export default function single() {
     return (
         <div className='single' >
-            single
+            
             <Singlepost/>
             <Sidebar/>
         </div>

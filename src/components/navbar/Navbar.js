@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
     return (
         <div className="nav">
             <div className="lefticons">
@@ -12,8 +12,8 @@ export default function Navbar() {
             <div className="center">
                 <ul className="topicon">
                     <li className="listitem">Home</li>
-                    <li className="listitem">About Us</li>
-                    <li className="listitem">Contact</li>
+                    <li className="listitem">About-{props.title}</li>
+                    <li className="listitem">Contact Us</li>
                     <li className="listitem">Log Out</li>
                 </ul>
             </div>

@@ -1,0 +1,61 @@
+.singlepost{
+    /* display: flex;  not needed here as the parent component has made it flex already*/
+    flex: 9;
+}
+
+.singlepostwrapper{
+    padding: 20px;
+    padding-right: 0px;
+}
+
+.singlepostimg{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.singleposttitle{
+    text-align: center;
+    margin: 10px;
+    font-family: 'Lora',serif;
+    font-size: 28px;
+}
+
+.singlepostedit{
+    float: right; /*puts the icons in the same line as the title*/
+    font-size: 20px;
+}
+
+.singleposticon{
+    margin-left: 15px;
+    cursor: pointer; 
+}
+
+.singleposticon:first-child{ /*chooses the edit icon*/
+    color: palevioletred;
+}
+
+.singleposticon:last-child{ /*chooses the delete icon*/
+    color: red;
+}
+
+.singlepostinfo{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /*puts space between AUTHOR and DATE */
+    font-size: 16px;
+    color: goldenrod;
+}
+
+.singlepostdescription{
+    color:#666;
+    font-size: 18px;
+    line-height: 28px;
+}
+.singlepostdescription::first-letter{  /*SELECTS the first letter of the element*/
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;  /*increases boldness of the letter*/
+    
+}

@@ -21,8 +21,8 @@
 
 .headertitlelg{
     position: absolute;
-    top: 20%; /*spacing between headertitlelg and headertitlesm*/
-    font-size: 80px;
+    top: 25%; /*spacing between headertitlelg and headertitlesm*/
+    font-size: 30px;
 }
 
 .headerimg{

@@ -1,6 +1,6 @@
 import "./post.css";
 
-export default function Post() {
+export default function Post(props) {
   return (
     <div className="post">
       <img
@@ -11,10 +11,10 @@ export default function Post() {
       />
       <div className="postinfo">
         <div className="postcats">
-          <span className="postcat">Music </span>
-          <span className="postcat">Life</span>
+          <span className="postcat">Computer science </span>
+          <span className="postcat">Data structures</span>
         </div>
-        <span className="posttitle">Lorem ipsum dolor sit</span>
+        <span className="posttitle">Data structures with {props.title}</span>
         <hr />
         <span className="postdate">1 hour ago</span>
       </div>

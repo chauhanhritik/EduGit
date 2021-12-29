@@ -1,11 +1,21 @@
-import React from 'react'
-import "./Navbar.css";
+import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-export default function Navbar(props) {
-    let user = false;
+import "./Navbar.css";
+
+class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {user: true};
+  }
+  render() {
+    console.log(this.props);
     return (
-        <div className="nav">
+
+      <React.Fragment>
+       
+           <div className="nav">
             <div className="lefticons">
                 <i className="licons fas fa-user-graduate"></i>
                 <i className="licons fab fa-instagram"></i>
@@ -20,23 +30,23 @@ export default function Navbar(props) {
                     </li>
                     <li className="listitem">
                         <Link classname='link' to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
-                             About-{props.title} 
+                             About-Edugit 
                         </Link>
                     </li>
                     <li className="listitem">
-                        <Link classname='link' to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Link classname='link' to='/contactus' style={{ textDecoration: 'none', color: 'inherit' }}>
                              Contact Us
                          </Link>
                     </li>
                     <li className="listitem">
                         <Link classname='link' to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
-                             {user && 'Logout'} {/*Shown only if user is TRUE*/}
+                             {this.state.user && 'Logout'} {/*Shown only if user is TRUE*/}
                         </Link>
                     </li>
                 </ul>
             </div>
             <div className="right">
-                {user ? (
+                {this.state.user ? (
                 <img className="topimg" src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_960_720.jpg" alt="" srcset="" />
                 ) : (
                    <ul className="topicon">
@@ -47,5 +57,12 @@ export default function Navbar(props) {
                 <i className="searchicon topsearchicon fas fa-search"></i>
             </div>
         </div>
-    )
+
+      </React.Fragment>
+    );
+  }
+
+ 
 }
+
+export default NavBar;

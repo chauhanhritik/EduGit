@@ -1,0 +1,58 @@
+.register{
+    width: 100%;
+    height: 565px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Puts the content to center of page else each item will cover the whole width unless specified*/
+    justify-content: center;
+    /*sets the image as background in below property  linear gradient adds a shade above image of the specified color*/
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://i.ytimg.com/vi/Qmt0QwzEmh0/maxresdefault.jpg'); 
+}
+
+.registertitle{
+    font-size: 50px;
+}
+
+.registerform{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column ;
+}
+
+.registerform>label{
+    margin: 10px 0;
+}
+.registerinput{
+    padding:10px;
+    border: none;
+    background-color: rgb(233, 233, 203);
+}
+
+.registerbutton{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+    width: 60%;
+    align-self: center;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: none ;
+    font-style: oblique;
+    border-radius:15px ;
+}
+
+.loginregisterbutton{
+    /*the below three lines place the Register button to the top-right corner*/
+    position: absolute;
+    width: 120px;
+    top: 70px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    border-radius: 10px;
+    border:none;
+    font-size: 18px;
+    padding: 15px;
+    color: lightyellow;
+}

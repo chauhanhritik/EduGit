@@ -6,14 +6,17 @@ import Questions from "../questions/Questions";
 const Ques = (props) => {
   const [questions, setQuestions] = useState([]);
 
+  const [page_no, setPage] = useState([]);
+
   useEffect(() => {
+    setPage(1);
     retrieveQuestions();
   }, []);
 
   const retrieveQuestions = () => {
-    QuestionDataService.getAll()
+    QuestionDataService.getAll(page_no)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setQuestions(response.data.questions);
       })
       .catch((e) => {
@@ -21,19 +24,33 @@ const Ques = (props) => {
       });
   };
 
-  const refreshList = () => {
+  const next_click = () => {
+    setPage(page_no + 1);
     retrieveQuestions();
   };
 
-  const find = (query, by) => {
-    QuestionDataService.find(query, by)
-      .then((response) => {
-        console.log(response.data);
-        setQuestions(response.data.questions);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+  const reset_click = () => {
+    //FAULTY!!
+
+    setPage(1);
+    retrieveQuestions();
+    // setPage(1);
+  };
+
+  const prev_click = () => {
+    if (page_no > 1) {
+      setPage(page_no - 1);
+      retrieveQuestions();
+      // console.log(page_no);
+    }
+  };
+
+  const gotoPage_click = () => {
+    //FAULTY!!
+
+    var pno = document.getElementById("page_text_box");
+    setPage(pno.value);
+    retrieveQuestions();
   };
 
   return (
@@ -42,7 +59,7 @@ const Ques = (props) => {
         return (
           <div>
             <Questions
-              sno={i + 1}
+              sno={(page_no - 1) * 20 + i + 1}
               question={questions.Name}
               mode={questions.Question_Type}
             />
@@ -50,22 +67,28 @@ const Ques = (props) => {
         );
       })}
 
-      {/* <Questions sno="1" question={questions.name} mode="Beginner" />
-      <Questions
-        sno="2"
-        question='Find the "Kth" max and min element of an array  '
-        mode="Beginner"
-      />
-      <Questions
-        sno="3"
-        question="Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo"
-        mode="Beginner"
-      />
-      <Questions
-        sno="4"
-        question="Minimise the maximum difference between heights [V.IMP]"
-        mode="Beginner"
-      /> */}
+      <form>
+        <button className="btn btn-primary" type="button" onClick={next_click}>
+          NEXT
+        </button>
+
+        <input type="text" defaultValue={page_no} id="page_text_box" />
+        <button
+          className="btn btn-primary"
+          type="button"
+          onClick={gotoPage_click}
+        >
+          Go To
+        </button>
+
+        <button className="btn btn-primary" type="button" onClick={reset_click}>
+          RESET
+        </button>
+
+        <button className="btn btn-primary" type="button" onClick={prev_click}>
+          BACK
+        </button>
+      </form>
     </div>
   );
 };

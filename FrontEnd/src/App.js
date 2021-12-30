@@ -9,30 +9,24 @@ import Single from "./pages/single/Single.js";
 import Write from "./pages/write/Write.js";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Contact from "./pages/contact/Contact.js";
-import Ques from "./pages/ques/Ques.js";
+import Ques from "./pages/ques/Ques copy.js";
 
 function App() {
   let title = "EDUGIT";
 
-  // const mongoose = require('mongoose');
-
-  // const db = "mongodb+srv://Hritik:<password>@cluster0.b2c1y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-  // mongoose.connect(db);
-
   //   <div style={{color:'white'}}>
   //   blog app
   // </div>
-let user = true;
+  let user = true;
   return (
     <Router>
       <Navbar title={title}></Navbar>
       {/* insert here */}
 
-     <Route path='/contactus'>
-       <Contact/>
-     </Route>
-     <Switch>
+      <Route path="/contactus">
+        <Contact />
+      </Route>
+      <Switch>
         <Route exact path="/">
           <Home title={title} />
         </Route>
@@ -43,18 +37,14 @@ let user = true;
           user can navigate to register page otherwise he will be redirected
           to home page */}
         </Route>
-        <Route path='/question'>
-          <Ques/>
-          {/* <Questions/> */}
+        <Route path="/question">
+          <Ques />
+          {/* <Questions /> */}
         </Route>
 
-        <Route path="/login">
-        {user ? <Home /> : <Login />}
-        </Route>
+        <Route path="/login">{user ? <Home /> : <Login />}</Route>
 
-        <Route path="/setting">
-        {user ? <Setting /> : <Login/>}
-        </Route>
+        <Route path="/setting">{user ? <Setting /> : <Login />}</Route>
 
         <Route path="/single">
           <Single />
@@ -70,7 +60,7 @@ let user = true;
           </Route> */}
       </Switch>
 
-{/* <Route path='/'>
+      {/* <Route path='/'>
             
 </Route> */}
     </Router>

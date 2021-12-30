@@ -1,9 +1,9 @@
 import http from "../http-common";
 
 class QuestionDataService {
-  getAll(page = 0) {
-    let str = `?page=${page}`;
-    return http.get(str);
+  getAll(page) {
+    // console.log(`${page}`);
+    return http.get(`page=${page}`);
   }
 }
 

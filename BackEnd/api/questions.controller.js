@@ -8,9 +8,7 @@ export default class QuestionsController {
     const page = req.query.page ? parseInt(req.query.page, 10) : 0;
 
     let filters = {};
-    if (req.query.zipcode) {
-      filters.zipcode = req.query.zipcode;
-    } else if (req.query.name) {
+    if (req.query.name) {
       filters.name = req.query.name;
     }
 

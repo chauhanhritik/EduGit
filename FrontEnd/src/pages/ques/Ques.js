@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import QuestionDataService from "../../services/questions";
-import Questions from "../questions/Questions";
+import Questions from "../questions/QuestionsLayout";
 // import { Link } from "react-router-dom";
 
 const Ques = (props) => {

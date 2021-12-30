@@ -2,7 +2,7 @@ import Navbar from "./components/navbar/Navbar.js";
 import Home from "./pages/Home.js";
 import Login from "./pages/login/Login.js";
 // import Ques from "./pages/questions/Ques.js";
-import Questions from "./pages/questions/Questions.js";
+import Questions from "./pages/questions/QuestionsLayout.js";
 import Register from "./pages/register/Register.js";
 import Setting from "./pages/settings/Setting.js";
 import Single from "./pages/single/Single.js";

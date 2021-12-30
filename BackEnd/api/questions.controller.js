@@ -44,14 +44,4 @@ export default class QuestionsController {
       res.status(500).json({ error: e });
     }
   }
-
-  //   static async apiGetQuestionsCuisines(req, res, next) {
-  //     try {
-  //       let cuisines = await QuestionsDAO.getCuisines();
-  //       res.json(cuisines);
-  //     } catch (e) {
-  //       console.log(`api, ${e}`);
-  //       res.status(500).json({ error: e });
-  //     }
-  //   }
 }

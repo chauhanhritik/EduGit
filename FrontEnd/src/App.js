@@ -9,7 +9,7 @@ import Single from "./pages/single/Single.js";
 import Write from "./pages/write/Write.js";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Contact from "./pages/contact/Contact.js";
-import Ques from "./pages/ques/Ques copy.js";
+import Ques from "./pages/ques/Ques.js";
 
 function App() {
   let title = "EDUGIT";

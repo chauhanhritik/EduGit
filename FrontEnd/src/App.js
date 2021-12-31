@@ -21,31 +21,35 @@ function App() {
   //   blog app
   // </div>
   let user = false;
+  let handleUserCallback = (userVal) => {
+    user = userVal;
+  };
+
   return (
     <Router>
       <Navbar title={title}></Navbar>
       {/* insert here */}
 
       <Switch>
-      <Route exact path="/">
+        <Route exact path="/">
           <Homepage />
-      </Route>
-      <Route path="/contactus">
-        <Contact />
-      </Route>
-      <Route path="/home">
-        <Homepage />
-      </Route>
-      
-        <Route path="/register">
-          {user ? <Homepage /> : <Register />}
         </Route>
+        <Route path="/contactus">
+          <Contact />
+        </Route>
+        <Route path="/home">
+          <Homepage />
+        </Route>
+
+        <Route path="/register">{user ? <Homepage /> : <Register />}</Route>
         <Route path="/question">
           <Ques />
           {/* <Questions /> */}
         </Route>
 
-        <Route path="/login">{user ? <Homepage /> : <Login />}</Route>
+        <Route path="/login">
+          {user ? <Homepage /> : <Login userCallback={handleUserCallback} />}
+        </Route>
 
         <Route path="/setting">{user ? <Setting /> : <Login />}</Route>
 
@@ -60,9 +64,9 @@ function App() {
           {/* If post/id is there then it gets dierected to single post page  */}
           <Single />
         </Route>
-         <Route path='/quespage'>
-            <Quespage/>
-        </Route> 
+        <Route path="/quespage">
+          <Quespage />
+        </Route>
 
         {/* <Route path='/'>
             

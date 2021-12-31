@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import QuestionDataService from "../../services/questions";
+
 import "./ques.css";
 import Questions from "../questions/QuestionsLayout";
 // import { Link } from "react-router-dom";
@@ -76,6 +77,7 @@ const Ques = (props) => {
         <input className="textbox" type="text" defaultValue={page_no} id="page_text_box" />
         <button
           className="btnGoto"
+
           type="button"
           onClick={gotoPage_click}
         >

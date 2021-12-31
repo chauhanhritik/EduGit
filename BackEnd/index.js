@@ -2,6 +2,7 @@ import app from "./server.js";
 import mongodb from "mongodb";
 import dotenv from "dotenv";
 import QuestionssDAO from "./dao/questionsDAO.js";
+import UserDAO from "./dao/usersDAO.js";
 
 //configuiring dotenv for use
 dotenv.config();
@@ -19,6 +20,7 @@ MongoClient.connect(process.env.EDUGIT_DB_URI, {
 
   .then(async (client) => {
     await QuestionssDAO.injectDB(client);
+    await UserDAO.injectDB(client);
     app.listen(port, () => {
       console.log(`listening on the port ${port}`);
     });

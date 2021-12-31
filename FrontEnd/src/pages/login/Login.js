@@ -1,16 +1,33 @@
 import "./login.css";
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import UserDataService from "./../../services/users";
 
 const Login = (props) => {
+  const [Uname, setUname] = useState([]); //The name of the user set after a successful login
+  const [loginStatus, setStatus] = useState(false); //variable to tell if the user is signed in
+
   const OnLoginClick = (event) => {
-    event.preventDefault();
-    console.log("Login Clicked");
-    var username_text_box = document.getElementById("username_text_box");
+    //Function called when login button is clicked
+    event.preventDefault(); //To stop the page from reloading
+
+    var username_text_box = document.getElementById("username_text_box"); //Getting username from textbox
     var username = username_text_box.value;
-    var password_text_box = document.getElementById("password_text_box");
+    var password_text_box = document.getElementById("password_text_box"); //Getting password
     var password = password_text_box.value;
-    console.log(username + password);
+
+    UserDataService.getAll(username, password) //Calling getAll function from users.js and passing username and password
+      .then((response) => {
+        if (response.data.User.length == 1) {
+          //if credentials are correct, an array of size 1 is returned
+          setStatus(true); //user is signed in now
+          setUname(response.data.User[0].UserName); //User's name assigned to a variable
+          console.log(Uname);
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   return (

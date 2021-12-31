@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import QuestionDataService from "../../services/questions";
+
+import "./ques.css";
 import Questions from "../questions/QuestionsLayout";
 // import { Link } from "react-router-dom";
 
@@ -67,25 +69,26 @@ const Ques = (props) => {
         );
       })}
 
-      <form>
-        <button className="btn btn-primary" type="button" onClick={prev_click}>
+      <form className="form">
+        <button className="btnBack" type="button" onClick={prev_click}>
           BACK
         </button>
 
-        <input type="text" defaultValue={page_no} id="page_text_box" />
+        <input className="textbox" type="text" defaultValue={page_no} id="page_text_box" />
         <button
-          className="btn btn-primary"
+          className="btnGoto"
+
           type="button"
           onClick={gotoPage_click}
         >
           Go To
         </button>
 
-        <button className="btn btn-primary" type="button" onClick={reset_click}>
+        <button className="btnReset" type="button" onClick={reset_click}>
           RESET
         </button>
 
-        <button className="btn btn-primary" type="button" onClick={next_click}>
+        <button className="btnBack" type="button" onClick={next_click}>
           NEXT
         </button>
       </form>

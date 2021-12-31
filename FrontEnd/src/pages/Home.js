@@ -10,7 +10,7 @@ export default function Home(props) {
         <div className="home"> 
             <br/>
             <Posts title={props.title}/>
-            <Sidebar/>
+            {/* <Sidebar/> */}
         </div>
         </>
     )

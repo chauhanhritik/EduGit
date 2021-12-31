@@ -1,0 +1,73 @@
+.head{
+    display: flex;
+    margin: 5%;
+    /* margin-top: 10%; */
+    background-color: rgb(84, 253, 84);
+    flex-wrap: wrap;
+}
+
+.question{
+    border: 2px solid white;
+    flex: 2;
+    margin: 50px;
+    font-size: 25px;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: rgba(243, 241, 136, 0.747);
+    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-self: center; */
+    /* align-content: center; */
+}
+
+.soltextlink{
+    border: 2px solid white;
+    flex: 1;
+justify-content: center;
+    margin: 50px;
+    font-size: 25px;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 15px;
+    background-color:  rgba(243, 241, 136, 0.747);
+    text-align: center;
+}
+
+.videolink{
+    border: 2px solid white;
+    padding: 12px;
+    flex: 1;
+    margin: 50px;
+    padding-top: 20px;
+    font-size: 25px;
+    border-radius: 20px;
+    background-color:  rgba(243, 241, 136, 0.747);
+    text-align: center;
+}
+
+.videobtn{
+    /* border: 2px solid rgb(0, 225, 255); */
+    border: none;
+    margin: 35px;
+    /* height:50px; */
+    font-size: 25px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(170, 130, 245);
+    text-align: center;
+}
+
+.textbtn{
+    /* border: 2px solid lemonchiffon; */
+    border: none;
+    margin: 35px;
+    /* height:50px; */
+    font-size: 25px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(170, 130, 245);
+    text-align: center;
+}

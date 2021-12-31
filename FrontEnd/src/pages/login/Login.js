@@ -1,4 +1,5 @@
 import "./login.css";
+import Homepage from "../Homepage/Homepage";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import UserDataService from "./../../services/users";
@@ -23,7 +24,8 @@ const Login = (props) => {
           setStatus(true); //user is signed in now
           setUname(response.data.User[0].UserName); //User's name assigned to a variable
           console.log(Uname);
-          this.props.userCallBack(true);
+          props.userCallBack(true);
+          
         } else {
           username_text_box.value = "Incorrect Credentials";
         }
@@ -51,10 +53,12 @@ const Login = (props) => {
           className="logininput"
           placeholder="Enter your password"
         ></input>
+        
         <button className="loginbutton" onClick={OnLoginClick}>
           Login
         </button>
       </form>
+      
       <Link
         to="/register"
         className="loginregisterbutton"

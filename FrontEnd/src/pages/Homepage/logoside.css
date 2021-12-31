@@ -1,0 +1,9 @@
+.logo{
+    flex: 1;
+    /* justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;*/
+    margin-top: 100px; 
+    background-color: #f5f5f5;
+}

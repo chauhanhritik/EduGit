@@ -33,7 +33,7 @@ class NavBar extends Component {
               <li className="listitem">
                 <Link
                   classname="link"
-                  to="/question"
+                  to="/"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   About-Edugit

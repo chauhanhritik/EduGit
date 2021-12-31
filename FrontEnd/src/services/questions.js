@@ -3,7 +3,8 @@ import http from "../http-common";
 class QuestionDataService {
   getAll(page) {
     // console.log(`${page}`);
-    return http.get(`page=${page}`);
+    var str = "questions?page=" + page;
+    return http.get(str);
   }
 }
 

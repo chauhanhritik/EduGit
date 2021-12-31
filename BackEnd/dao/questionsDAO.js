@@ -1,6 +1,6 @@
 let questions; //holds reference to questions database
 
-export default class RestaurantsDAO {
+export default class QuestionsDAO {
   //to be used to connect to database
   static async injectDB(conn) {
     //how we initially connect to database and the funtion to be called as soon as the server starts

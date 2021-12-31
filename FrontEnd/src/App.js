@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar.js";
 // import Home from "./pages/Home.js";
 import Login from "./pages/login/Login.js";
@@ -14,7 +15,7 @@ import Quespage from "./pages/questions/Quespage.js";
 import Homepage from "./pages/Homepage/Homepage.js";
 import Posts from "./components/posts/Posts.js";
 
-function App() {
+function App(props) {
   let title = "EDUGIT";
 
   //   <div style={{color:'white'}}>

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import UserDataService from "./../../services/users";
 
 const Login = (props) => {
-  const OnLoginClick = () => {
+  const OnLoginClick = (event) => {
+    event.preventDefault();
     console.log("Login Clicked");
     var username_text_box = document.getElementById("username_text_box");
     var username = username_text_box.value;
@@ -11,11 +12,6 @@ const Login = (props) => {
     var password = password_text_box.value;
     console.log(username + password);
   };
-  
-  export default function Login() {
-    const handleClick = (event) =>{
-        event.preventDefault();
-    }
 
   return (
     <div className="login">

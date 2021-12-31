@@ -11,6 +11,11 @@ const Login = (props) => {
     var password = password_text_box.value;
     console.log(username + password);
   };
+  
+  export default function Login() {
+    const handleClick = (event) =>{
+        event.preventDefault();
+    }
 
   return (
     <div className="login">

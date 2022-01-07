@@ -72,6 +72,7 @@ class NavBar extends Component {
                     srcset=""
                   />
                 </li>
+                <li>Welcome {this.props.userName}</li>
                 <button className="buttonstitem" onClick={this.props.logout}>
                   Logout
                 </button>

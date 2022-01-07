@@ -20,6 +20,7 @@ class App extends Component {
   state = {
     title: "EDUGIT",
     user: false,
+    userName: "",
   };
 
   //   <div style={{color:'white'}}>
@@ -27,8 +28,8 @@ class App extends Component {
   // </div>
 
   // let user = false;
-  handleUserCallback = (userVal) => {
-    this.setState({ user: userVal });
+  handleUserCallback = (userVal, username = "") => {
+    this.setState({ user: userVal, userName: username });
     console.log("UserCallBack Called");
   };
 
@@ -42,6 +43,7 @@ class App extends Component {
         <Navbar
           title={this.state.title}
           user={this.state.user}
+          userName={this.state.userName}
           logout={this.logoutClick}
         ></Navbar>
         {/* insert here */}

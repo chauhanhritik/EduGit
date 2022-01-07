@@ -25,7 +25,7 @@ const Login = (props) => {
           setStatus(true); //user is signed in now
           setUname(response.data.User[0].UserName); //User's name assigned to a variable
           //   console.log(Uname);
-          props.userCallback(true);
+          props.userCallback(loginStatus, Uname);
         } else {
           username_text_box.value = "Incorrect Credentials";
         }

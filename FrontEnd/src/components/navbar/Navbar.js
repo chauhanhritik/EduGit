@@ -7,10 +7,12 @@ class NavBar extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { user: props.user };
+    // this.state = { user: props.user };
   }
   render() {
+    console.log("NavBar rendered");
     console.log(this.props);
+
     return (
       <React.Fragment>
         <div className="nav">
@@ -48,25 +50,32 @@ class NavBar extends Component {
                   Contact Us
                 </Link>
               </li>
-              <li className="listitem">
+              {/* <li className="listitem">
                 <Link
                   classname="link"
                   to="/"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  {this.state.user && "Logout"} {/*Shown only if user is TRUE*/}
+                  {this.state.user && "Logout"} {/*Shown only if user is TRUE
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="right">
-            {this.state.user ? (
-              <img
-                className="topimg"
-                src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_960_720.jpg"
-                alt=""
-                srcset=""
-              />
+            {this.props.user ? (
+              <ul className="topicon">
+                <li className="listitem">
+                  <img
+                    className="topimg"
+                    src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_960_720.jpg"
+                    alt=""
+                    srcset=""
+                  />
+                </li>
+                <button className="buttonstitem" onClick={this.props.logout}>
+                  Logout
+                </button>
+              </ul>
             ) : (
               <ul className="topicon">
                 <Link

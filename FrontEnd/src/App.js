@@ -29,13 +29,21 @@ class App extends Component {
   // let user = false;
   handleUserCallback = (userVal) => {
     this.setState({ user: userVal });
-    console.log(this.state.user);
+    console.log("UserCallBack Called");
+  };
+
+  logoutClick = () => {
+    this.setState({ user: false });
   };
 
   render() {
     return (
       <Router>
-        <Navbar title={this.state.title} user={this.state.user}></Navbar>
+        <Navbar
+          title={this.state.title}
+          user={this.state.user}
+          logout={this.logoutClick}
+        ></Navbar>
         {/* insert here */}
 
         <Switch>

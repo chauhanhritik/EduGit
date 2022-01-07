@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import Navbar from "./components/navbar/Navbar.js";
 // import Home from "./pages/Home.js";
 import Login from "./pages/login/Login.js";
@@ -15,70 +15,90 @@ import Quespage from "./pages/questions/Quespage.js";
 import Homepage from "./pages/Homepage/Homepage.js";
 import Posts from "./components/posts/Posts.js";
 
-function App(props) {
-  let title = "EDUGIT";
+class App extends Component {
+  // let title = "EDUGIT";
+  state = {
+    title: "EDUGIT",
+    user: false,
+  };
 
   //   <div style={{color:'white'}}>
   //   blog app
   // </div>
-  let user = false;
-  let handleUserCallback = (userVal) => {
-    user = userVal;
+
+  // let user = false;
+  handleUserCallback = (userVal) => {
+    this.setState({ user: userVal });
+    console.log(this.state.user);
   };
 
-  return (
-    <Router>
-      <Navbar title={title}></Navbar>
-      {/* insert here */}
+  render() {
+    return (
+      <Router>
+        <Navbar title={this.state.title} user={this.state.user}></Navbar>
+        {/* insert here */}
 
-      <Switch>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route path="/contactus">
-          <Contact />
-        </Route>
-        <Route path="/home">
-          <Homepage />
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route path="/contactus">
+            <Contact />
+          </Route>
+          <Route path="/home">
+            <Homepage />
+          </Route>
 
-        <Route path="/register">{user ? <Homepage /> : <Register />}</Route>
-        <Route path="/question">
-          <Ques />
-          {/* <Questions /> */}
-        </Route>
+          <Route path="/register">
+            {this.state.user ? <Homepage /> : <Register />}
+          </Route>
+          <Route path="/question">
+            <Ques />
+            {/* <Questions /> */}
+          </Route>
 
-        <Route path="/login">
-          {user ? <Homepage /> : <Login userCallback={handleUserCallback} />}
-        </Route>
+          <Route path="/login">
+            {this.state.user ? (
+              <Homepage />
+            ) : (
+              <Login userCallback={this.handleUserCallback} />
+            )}
+          </Route>
 
-        <Route path="/setting">{user ? <Setting /> : <Login />}</Route>
+          <Route path="/setting">
+            {this.state.user ? (
+              <Setting />
+            ) : (
+              <Login userCallback={this.handleUserCallback} />
+            )}
+          </Route>
 
-        <Route path="/single">
-          <Single />
-        </Route>
-        <Route path="/articles">
-          <Posts />
-        </Route>
+          <Route path="/single">
+            <Single />
+          </Route>
+          <Route path="/articles">
+            <Posts />
+          </Route>
 
-        <Route path="/post/:postid">
-          {/* If post/id is there then it gets dierected to single post page  */}
-          <Single />
-        </Route>
-        <Route path="/quespage">
-          <Quespage />
-        </Route>
+          <Route path="/post/:postid">
+            {/* If post/id is there then it gets dierected to single post page  */}
+            <Single />
+          </Route>
+          <Route path="/quespage">
+            <Quespage />
+          </Route>
+
+          {/* <Route path='/'>
+            
+          </Route> */}
+        </Switch>
 
         {/* <Route path='/'>
             
-          </Route> */}
-      </Switch>
-
-      {/* <Route path='/'>
-            
 </Route> */}
-    </Router>
-  );
+      </Router>
+    );
+  }
 }
 
 export default App;

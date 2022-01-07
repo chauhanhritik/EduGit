@@ -11,6 +11,7 @@ const Login = (props) => {
   const OnLoginClick = (event) => {
     //Function called when login button is clicked
     event.preventDefault(); //To stop the page from reloading
+    console.log(props);
 
     var username_text_box = document.getElementById("username_text_box"); //Getting username from textbox
     var username = username_text_box.value;
@@ -23,9 +24,8 @@ const Login = (props) => {
           //if credentials are correct, an array of size 1 is returned
           setStatus(true); //user is signed in now
           setUname(response.data.User[0].UserName); //User's name assigned to a variable
-          console.log(Uname);
-          props.userCallBack(true);
-          
+          //   console.log(Uname);
+          props.userCallback(true);
         } else {
           username_text_box.value = "Incorrect Credentials";
         }
@@ -53,12 +53,12 @@ const Login = (props) => {
           className="logininput"
           placeholder="Enter your password"
         ></input>
-        
+
         <button className="loginbutton" onClick={OnLoginClick}>
           Login
         </button>
       </form>
-      
+
       <Link
         to="/register"
         className="loginregisterbutton"

@@ -1,5 +1,4 @@
 import "./login.css";
-import Homepage from "../Homepage/Homepage";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import UserDataService from "./../../services/users";
@@ -11,7 +10,7 @@ const Login = (props) => {
   const OnLoginClick = (event) => {
     //Function called when login button is clicked
     event.preventDefault(); //To stop the page from reloading
-    console.log(props);
+    // console.log(props);
 
     var username_text_box = document.getElementById("username_text_box"); //Getting username from textbox
     var username = username_text_box.value;

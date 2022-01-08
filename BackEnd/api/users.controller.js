@@ -19,18 +19,17 @@ export default class UsersController {
     };
     res.json(response);
   }
-  // static async apiGetQuestionsById(req, res, next) {
-  //   try {
-  //     let id = req.params.id || {};
-  //     let questions = await UsersDAO.getQuestionsByID(id);
-  //     if (!questions) {
-  //       res.status(404).json({ error: "Not found" });
-  //       return;
-  //     }
-  //     res.json(questions);
-  //   } catch (e) {
-  //     console.log(`api, ${e}`);
-  //     res.status(500).json({ error: e });
-  //   }
-  // }
+
+  static async apiRegisterUser(req, res, next) {
+    try {
+      const username = req.body.username;
+      const password = req.body.password;
+      const email = req.body.email;
+
+      const ReviewResponse = await UsersDAO.addUser(username, password, email);
+      res.json({ status: "success" });
+    } catch (e) {
+      res.status(500).json({ error: e.message });
+    }
+  }
 }

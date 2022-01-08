@@ -56,4 +56,19 @@ export default class UsersDAO {
       return (userData = 0);
     }
   }
+
+  static async addUser(username, password, email) {
+    try {
+      const registerDoc = {
+        Username: username,
+        Password: password,
+        Email: email,
+      };
+
+      return await users.insert(registerDoc);
+    } catch (e) {
+      console.error(`Unable to post review: ${e}`);
+      return { error: e };
+    }
+  }
 }

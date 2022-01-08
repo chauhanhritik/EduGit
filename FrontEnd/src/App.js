@@ -20,6 +20,7 @@ class App extends Component {
   state = {
     title: "EDUGIT",
     user: false,
+    register: false,
     userName: "",
   };
 
@@ -34,7 +35,11 @@ class App extends Component {
   };
 
   logoutClick = () => {
-    this.setState({ user: false });
+    this.setState({ user: false, register: false });
+  };
+
+  changeRegister = (value) => {
+    this.setState({ register: value });
   };
 
   render() {
@@ -60,7 +65,13 @@ class App extends Component {
           </Route>
 
           <Route path="/register">
-            {this.state.user ? <Homepage /> : <Register />}
+            {this.state.user ? (
+              <Homepage />
+            ) : this.state.register ? (
+              <Login userCallback={this.handleUserCallback} />
+            ) : (
+              <Register reg={this.changeRegister} />
+            )}
           </Route>
           <Route path="/question">
             <Ques />

@@ -19,6 +19,7 @@ const Login = (props) => {
 
     UserDataService.getAll(username, password) //Calling getAll function from users.js and passing username and password
       .then((response) => {
+        console.log(response);
         if (response.data.User.length == 1) {
           //if credentials are correct, an array of size 1 is returned
           setStatus(true); //user is signed in now

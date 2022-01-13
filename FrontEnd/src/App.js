@@ -54,6 +54,9 @@ class App extends Component {
         {/* insert here */}
 
         <Switch>
+          <Route path="/quespage">
+            <Quespage />
+          </Route>
           <Route exact path="/">
             <Homepage />
           </Route>

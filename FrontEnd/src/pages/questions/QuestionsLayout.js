@@ -16,7 +16,7 @@ export default function Questions(props) {
           </Switch> */}
     {/* half working-->     <Link to={`/$"https://stackoverflow.com/questions/30115324/pass-props-in-link-react-router"?backUrl=$"www.youtube.com"`} >click </Link> */}
     <a href="$`{props.solution}`" rel="noreferrer">
-    FAQ
+    (Solution)
   </a>
           </div>
            

@@ -64,3 +64,9 @@
     color:#666;
     margin-left: 40px;
 }
+
+.buttonstitem{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

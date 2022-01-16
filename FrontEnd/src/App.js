@@ -14,6 +14,7 @@ import Ques from "./pages/ques/Ques.js";
 import Quespage from "./pages/questions/Quespage.js";
 import Homepage from "./pages/Homepage/Homepage.js";
 import Posts from "./components/posts/Posts.js";
+import About from "./pages/about/About.js";
 
 class App extends Component {
   // let title = "EDUGIT";
@@ -102,6 +103,10 @@ class App extends Component {
           </Route>
           <Route path="/articles">
             <Posts />
+          </Route>
+
+           <Route path='/about'>
+            <About/>
           </Route>
 
           <Route path="/post/:postid">

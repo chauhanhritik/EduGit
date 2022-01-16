@@ -1,0 +1,45 @@
+
+
+
+.aboutheading{
+    background: RGB(239, 192, 80);
+    margin: 10px;
+    /* padding: 10px; */
+}
+
+.column {
+    float: left;
+    width: 20%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .container>p{
+      padding-top: 10px;
+      padding-left: 3px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .title {
+    color: grey;
+  }
+
+  
+.aboutheading > h1{
+    text-align: center;
+}
+
+.aboutheading>p{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+
+}

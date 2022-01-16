@@ -10,8 +10,8 @@ class NavBar extends Component {
     // this.state = { user: props.user };
   }
   render() {
-    console.log("NavBar rendered");
-    console.log(this.props);
+    // console.log("NavBar rendered");
+    // console.log(this.props);
 
     return (
       <React.Fragment>

@@ -64,6 +64,7 @@ const Ques = (props) => {
               sno={(page_no - 1) * 20 + i + 1}
               question={questions.Name}
               mode={questions.Question_Type}
+              solution={questions.Link}
             />
           </div>
         );
@@ -74,13 +75,13 @@ const Ques = (props) => {
           BACK
         </button>
 
-        <input className="textbox" type="text" defaultValue={page_no} id="page_text_box" />
-        <button
-          className="btnGoto"
-
-          type="button"
-          onClick={gotoPage_click}
-        >
+        <input
+          className="textbox"
+          type="text"
+          defaultValue={page_no}
+          id="page_text_box"
+        />
+        <button className="btnGoto" type="button" onClick={gotoPage_click}>
           Go To
         </button>
 

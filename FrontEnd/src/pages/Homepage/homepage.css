@@ -1,6 +1,44 @@
-.outermost{
-    width: 100%;
-    display: flex;
-    /* margin: 5px; */
-    /* background-color: rgb(167, 143, 107); */
-}
+.navMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .navMenu a {
+    color: #585117;
+    text-decoration: none;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    /* width: 150px; */
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  #feed {
+    width: 100px;
+  }
+
+  #article {
+    width: 160px;
+  }
+  
+  #about {
+    width: 130px;
+  }
+
+  #contact {
+    width: 150px;
+  }
+
+  #logout {
+    width: 100px;
+  }
+
+  .navMenu a:hover {
+    color: #10879c;
+  }

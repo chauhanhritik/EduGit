@@ -73,8 +73,8 @@ const Register = (props) => {
       </form>
       <Link
         to="/login"
-        className="loginregisterbutton"
-        style={{ textDecoration: "none", color: "inherit" }}
+        className="registerloginbutton"
+        style={{ textDecoration: "none" }}
       >
         Login
       </Link>

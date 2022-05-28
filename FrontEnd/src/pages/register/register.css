@@ -6,7 +6,9 @@
     align-items: center; /*Puts the content to center of page else each item will cover the whole width unless specified*/
     justify-content: center;
     /*sets the image as background in below property  linear gradient adds a shade above image of the specified color*/
-    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://i.ytimg.com/vi/Qmt0QwzEmh0/maxresdefault.jpg'); 
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://miro.medium.com/max/1300/1*1Rc4-5VzLA_OR4cT0Zs_9A.jpeg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .registertitle{
@@ -42,17 +44,19 @@
     border-radius:15px ;
 }
 
-.loginregisterbutton{
+.registerloginbutton{
     /*the below three lines place the Register button to the top-right corner*/
     position: absolute;
-    width: 120px;
+    width: 50px;
     top: 70px;
-    right: 20px;
-    background-color: teal;
+    right: 15px;
+    background-color: rgb(63, 46, 216);
     cursor: pointer;
     border-radius: 10px;
     border:none;
     font-size: 18px;
     padding: 15px;
-    color: lightyellow;
+    /* padding-left: 20px; */
+    /* text-decoration: none; */
+    color: rgb(212, 212, 177);
 }

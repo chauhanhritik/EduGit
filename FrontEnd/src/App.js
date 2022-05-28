@@ -1,13 +1,9 @@
 import React, { Component, useState } from "react";
 import Navbar from "./components/navbar/Navbar.js";
-// import Home from "./pages/Home.js";
 import Login from "./pages/login/Login.js";
-// import Ques from "./pages/questions/Ques.js";
-// import Questions from "./pages/questions/QuestionsLayout.js";
 import Register from "./pages/register/Register.js";
 import Setting from "./pages/settings/Setting.js";
 import Single from "./pages/single/Single.js";
-import Write from "./pages/write/Write.js";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Contact from "./pages/contact/Contact.js";
 import Ques from "./pages/ques/Ques.js";
@@ -15,6 +11,7 @@ import Quespage from "./pages/questions/Quespage.js";
 import Homepage from "./pages/Homepage/Homepage.js";
 import Posts from "./components/posts/Posts.js";
 import About from "./pages/about/About.js";
+import Footer from "./components/footer/Footer.js";
 
 class App extends Component {
   // let title = "EDUGIT";
@@ -46,29 +43,46 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Navbar
+        {/* <Navbar
+          title={this.state.title}
+          user={this.state.user}
+          userName={this.state.userName}
+          logout={this.logoutClick}
+        ></Navbar> */}
+        {/* insert here */}
+        {/* <About/>   */}
+        <Switch>
+
+        <Route exact path="/">
+            <Homepage />
+          </Route>
+
+          <Route exact path="/quespage">
+          <Navbar
           title={this.state.title}
           user={this.state.user}
           userName={this.state.userName}
           logout={this.logoutClick}
         ></Navbar>
-        {/* insert here */}
+          </Route>
 
-        <Switch>
-          <Route path="/quespage">
-            <Quespage />
+          <Route exact path='/about'>
+            <Navbar/>
+            <About/>
           </Route>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-          <Route path="/contactus">
+           
+          <Route exact path="/contactus">
+            <Navbar/>
             <Contact />
           </Route>
-          <Route path="/home">
-            <Homepage />
+          
+          <Route exact path="/articles">
+            <Navbar/>
+            <Posts />
           </Route>
 
           <Route path="/register">
+          <Navbar/>
             {this.state.user ? (
               <Homepage />
             ) : this.state.register ? (
@@ -77,12 +91,10 @@ class App extends Component {
               <Register reg={this.changeRegister} />
             )}
           </Route>
-          <Route path="/question">
-            <Ques />
-            {/* <Questions /> */}
-          </Route>
+          
 
           <Route path="/login">
+            <Navbar/>
             {this.state.user ? (
               <Homepage />
             ) : (
@@ -101,31 +113,12 @@ class App extends Component {
           <Route path="/single">
             <Single />
           </Route>
-          <Route path="/articles">
-            <Posts />
-          </Route>
 
-           <Route path='/about'>
-            <About/>
-          </Route>
-
-          <Route path="/post/:postid">
-            {/* If post/id is there then it gets dierected to single post page  */}
-            <Single />
-          </Route>
-          <Route path="/quespage">
-            <Quespage />
-          </Route>
-
-          {/* <Route path='/'>
-            
-          </Route> */}
         </Switch>
 
-        {/* <Route path='/'>
-            
-</Route> */}
+        
       </Router>
+      
     );
   }
 }

@@ -62,7 +62,7 @@ const Login = (props) => {
       <Link
         to="/register"
         className="loginregisterbutton"
-        style={{ textDecoration: "none", color: "inherit" }}
+        style={{ textDecoration: "none"}}
       >
         Register
       </Link>

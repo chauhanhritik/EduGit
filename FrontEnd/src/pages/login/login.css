@@ -6,7 +6,10 @@
     align-items: center; /*Puts the content to center of page else each item will cover the whole width unless specified*/
     justify-content: center;
     /*sets the image as background in below property  linear gradient adds a shade above image of the specified color*/
-    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://i.ytimg.com/vi/Qmt0QwzEmh0/maxresdefault.jpg'); 
+    /* background: url('https://proveg.com/wp-content/uploads/2016/12/shutterstock_68377594.jpg');  */
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(252, 249, 249, 0.5)), url('https://static.wixstatic.com/media/4bdf60_911843761c064b5d83cc7d3898d03b13~mv2.png/v1/fill/w_740,h_416,al_c,q_90/4bdf60_911843761c064b5d83cc7d3898d03b13~mv2.webp'); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logintitle{
@@ -45,14 +48,14 @@
 .loginregisterbutton{
     /*the below three lines place the Register button to the top-right corner*/
     position: absolute;
-    top: 80px;
-    right: 20px;
-    background-color: teal;
+    width: 60px;
+    top: 70px;
+    right: 15px;
+    background-color: rgb(63, 46, 216);
     cursor: pointer;
-    width: 30px;
     border-radius: 10px;
     border:none;
     font-size: 18px;
     padding: 15px;
-    color: lightyellow;
+    color: rgb(212, 212, 177);
 }

@@ -16,14 +16,11 @@ class NavBar extends Component {
     return (
       <React.Fragment>
         <div className="nav">
-          <div className="lefticons">
-            <i className="licons fas fa-user-graduate"></i>
-            <i className="licons fab fa-instagram"></i>
-            <i className="licons fab fa-twitter-square"></i>
-          </div>
+          
           <div className="center">
             <ul className="topicon">
-              <li className="listitem">
+
+            <li className="listitem">
                 <Link
                   classname="link"
                   style={{ textDecoration: "none", color: "inherit" }}
@@ -32,15 +29,37 @@ class NavBar extends Component {
                   Home
                 </Link>
               </li>
+
+              <li className="listitem">
+                <Link
+                  classname="link"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  to="/feed"
+                >
+                  Feed
+                </Link>
+              </li>
+
+              <li className="listitem">
+                <Link
+                  classname="link"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  to="/articles"
+                >
+                  Articles
+                </Link>
+              </li>
+
               <li className="listitem">
                 <Link
                   classname="link"
                   to="/about"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  About-Edugit
+                  About Us
                 </Link>
               </li>
+
               <li className="listitem">
                 <Link
                   classname="link"
@@ -50,15 +69,7 @@ class NavBar extends Component {
                   Contact Us
                 </Link>
               </li>
-              {/* <li className="listitem">
-                <Link
-                  classname="link"
-                  to="/"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  {this.state.user && "Logout"} {/*Shown only if user is TRUE
-                </Link>
-              </li> */}
+             
             </ul>
           </div>
           <div className="right">
@@ -96,7 +107,7 @@ class NavBar extends Component {
                 </Link>
               </ul>
             )}
-            <i className="searchicon topsearchicon fas fa-search"></i>
+           
           </div>
         </div>
       </React.Fragment>
